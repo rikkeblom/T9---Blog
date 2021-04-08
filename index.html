@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Blog</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h1>Totally Awesome Blog</h1>
+      <section class="formSection">
+        <p class="hidden thankYou">
+          Thank you for submitting a message. We will review it shortly!
+        </p>
+        <form name="postForm" method="POST" id="form">
+          <label for="formUsername">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="formUsername"
+            placeholder="Username"
+            required
+          />
+          <label for="formTitle">Post Title</label>
+          <input
+            type="text"
+            name="title"
+            id="formTitle"
+            placeholder="Post Title"
+            required
+          />
+          <label for="formPost">Your post</label>
+          <textarea
+            placeholder="Whats on your mind?"
+            name="formPost"
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input id="submit" type="submit" value="Send your post" />
+        </form>
+      </section>
+
+      <section class="showSection">
+        <template class="tempPost">
+          <article class="wrapPost">
+            <div class="flex">
+              <h2 class="postTitle"></h2>
+              <p class="postAuthor"></p>
+              <!-- <p class="postText"></p> -->
+            </div>
+            <a href="">Read More</a>
+          </article>
+        </template>
+      </section>
+    </main>
+    <script src="data.js"></script>
+    <script src="fetch.js"></script>
+  </body>
+</html>
