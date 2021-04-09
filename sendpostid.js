@@ -51,6 +51,7 @@ function userSubmitted(e) {
     email: form.elements.email.value,
     username: form.elements.username.value,
     content: form.elements.content.value,
+    date: Date.now(),
   };
 
   console.log(payload);
