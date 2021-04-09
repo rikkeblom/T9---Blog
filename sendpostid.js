@@ -73,6 +73,21 @@ function userSubmitted(e) {
       form.elements.username.value = "";
       form.elements.content.value = "";
       document.querySelector("input[type=submit]").disabled = false;
+
+      // grab the template
+      const template = document.querySelector("template").content;
+      //clone the template
+      const copy = template.cloneNode(true);
+      //change the content
+      copy.querySelector(
+        ".commentAuthor"
+      ).textContent = `By ${response.username}`;
+      copy.querySelector(".commentText").textContent = response.content;
+
+      //grab the parent
+      const parent = document.querySelector(".commentsection div");
+      //apend
+      parent.appendChild(copy);
     })
     .catch((err) => {
       console.error(err);
