@@ -1,5 +1,5 @@
 function fetchData() {
-  fetch("https://kea21-7e1e.restdb.io/rest/t9-post", {
+  fetch("https://kea21-7e1e.restdb.io/rest/t9-post?sort=date&dir=-1&max=5", {
     method: "GET",
     headers: {
       "x-apikey": "602f9e445ad3610fb5bb63d5",
